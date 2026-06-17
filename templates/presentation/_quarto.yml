@@ -1,0 +1,17 @@
+project:
+  output-dir: ../../docs/templates/presentation
+
+brand: ../../_brand.yml
+
+format:
+  revealjs:
+    theme: [default, brand, ../../scss/quarto-revealjs.scss]
+    lang: ko
+    slide-number: true
+    hash-type: number
+    center: false
+    transition: fade
+    width: 1600
+    height: 900
+    margin: 0.1
+    progress: true

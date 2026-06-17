@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "소개",
+    "section": "",
+    "text": "이 템플릿은 콘텐츠 양이 정해져 있고 구조가 단순한 사이트에 적합합니다.\n\n\n\n사용 예\n적합 여부\n\n\n\n\n제품/서비스 랜딩 페이지\n✅\n\n\n팀 소개 사이트\n✅\n\n\n오픈소스 라이브러리 문서 사이트 (소규모)\n✅\n\n\n컨퍼런스/이벤트 사이트\n✅\n\n\n블로그 (글 목록 필요)\n❌ → blog 템플릿\n\n\n책 (챕터·다운로드)\n❌ → book 템플릿\n\n\n대시보드\n❌ → dashboard 템플릿"
+  },
+  {
+    "objectID": "about.html#어떤-사이트에-적합한가",
+    "href": "about.html#어떤-사이트에-적합한가",
+    "title": "소개",
+    "section": "",
+    "text": "이 템플릿은 콘텐츠 양이 정해져 있고 구조가 단순한 사이트에 적합합니다.\n\n\n\n사용 예\n적합 여부\n\n\n\n\n제품/서비스 랜딩 페이지\n✅\n\n\n팀 소개 사이트\n✅\n\n\n오픈소스 라이브러리 문서 사이트 (소규모)\n✅\n\n\n컨퍼런스/이벤트 사이트\n✅\n\n\n블로그 (글 목록 필요)\n❌ → blog 템플릿\n\n\n책 (챕터·다운로드)\n❌ → book 템플릿\n\n\n대시보드\n❌ → dashboard 템플릿"
+  },
+  {
+    "objectID": "about.html#디자인-시스템",
+    "href": "about.html#디자인-시스템",
+    "title": "소개",
+    "section": "디자인 시스템",
+    "text": "디자인 시스템\n\n\n\n항목\n값\n\n\n\n\nPrimary 색상\nquarto-blue-400 (#74AADB)\n\n\nLink 색상\nquarto-blue-600 (#4080B7)\n\n\n본문 폰트\nPretendard\n\n\n코드 폰트\nD2Coding ligature\n\n\n행간\n1.75 (한국어 최적화)"
+  },
+  {
+    "objectID": "about.html#호환되는-다른-템플릿",
+    "href": "about.html#호환되는-다른-템플릿",
+    "title": "소개",
+    "section": "호환되는 다른 템플릿",
+    "text": "호환되는 다른 템플릿\n같은 _brand.yml을 공유하므로, 다음 출력물과 시각적으로 완전히 통일됩니다.\n\nreport — 단일 HTML 보고서\npresentation — RevealJS 슬라이드\ndashboard — 인터랙티브 대시보드\nbook — HTML + Typst PDF 책\nmanuscript — 학술 원고\nblog — 블로그 listing\nconfluence — Confluence 게시\ntypst-pdf — Typst 기반 한국어 PDF"
+  },
+  {
+    "objectID": "guide.html",
+    "href": "guide.html",
+    "title": "가이드",
+    "section": "",
+    "text": "새 .qmd 파일을 만들고 navbar에 등록합니다.\n\n\ntouch pricing.qmd\n\n\n\n---\ntitle: \"요금제\"\nsubtitle: \"필요에 맞는 플랜을 선택하세요\"\n---\n\n\n\n_quarto.yml의 website.navbar.left에 추가:\nnavbar:\n  left:\n    - href: index.qmd\n      text: 홈\n    - href: pricing.qmd\n      text: 요금제          # 새 항목\n    - href: about.qmd\n      text: 소개"
+  },
+  {
+    "objectID": "guide.html#페이지-추가",
+    "href": "guide.html#페이지-추가",
+    "title": "가이드",
+    "section": "",
+    "text": "새 .qmd 파일을 만들고 navbar에 등록합니다.\n\n\ntouch pricing.qmd\n\n\n\n---\ntitle: \"요금제\"\nsubtitle: \"필요에 맞는 플랜을 선택하세요\"\n---\n\n\n\n_quarto.yml의 website.navbar.left에 추가:\nnavbar:\n  left:\n    - href: index.qmd\n      text: 홈\n    - href: pricing.qmd\n      text: 요금제          # 새 항목\n    - href: about.qmd\n      text: 소개"
+  },
+  {
+    "objectID": "guide.html#네비게이션-옵션",
+    "href": "guide.html#네비게이션-옵션",
+    "title": "가이드",
+    "section": "네비게이션 옵션",
+    "text": "네비게이션 옵션\n\n드롭다운 메뉴\nnavbar:\n  left:\n    - text: 제품\n      menu:\n        - href: product-a.qmd\n          text: Product A\n        - href: product-b.qmd\n          text: Product B\n\n\n사이드바 (좌측 목차)\n페이지 수가 많아지면 navbar 대신 sidebar를 사용합니다.\nwebsite:\n  sidebar:\n    style: docked\n    contents:\n      - index.qmd\n      - section: 시작하기\n        contents:\n          - getting-started.qmd\n          - installation.qmd"
+  },
+  {
+    "objectID": "guide.html#seo-메타데이터",
+    "href": "guide.html#seo-메타데이터",
+    "title": "가이드",
+    "section": "SEO 메타데이터",
+    "text": "SEO 메타데이터\n_quarto.yml에 사이트 전체 메타데이터를 설정합니다.\nwebsite:\n  title: \"Quarto Craft\"\n  description: \"한국어 최적화 Quarto 디자인 시스템\"\n  open-graph: true\n  twitter-card:\n    creator: \"@yourhandle\"\n각 페이지 frontmatter에서 개별 오버라이드 가능:\n---\ntitle: \"요금제\"\ndescription: \"필요에 맞는 플랜을 선택하세요\"\nimage: thumb-pricing.png\n---"
+  },
+  {
+    "objectID": "guide.html#brand-토큰-직접-사용",
+    "href": "guide.html#brand-토큰-직접-사용",
+    "title": "가이드",
+    "section": "brand 토큰 직접 사용",
+    "text": "brand 토큰 직접 사용\nCSS에서 brand 색상을 직접 참조할 수 있습니다.\n.cta-button {\n  background: var(--bs-primary);  /* quarto-blue-400 */\n  color: white;\n}\n.cta-button:hover {\n  background: var(--bs-link-color);  /* quarto-blue-600 */\n}"
+  },
+  {
+    "objectID": "guide.html#배포",
+    "href": "guide.html#배포",
+    "title": "가이드",
+    "section": "배포",
+    "text": "배포\nquarto render          # docs/templates/website/ 에 출력\nquarto publish gh-pages  # GitHub Pages로 배포"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quarto Craft Website",
+    "section": "",
+    "text": "이 템플릿은 블로그가 아닌 일반 웹사이트(랜딩 페이지 · 제품 소개 · 문서 사이트)를 만들 때 사용합니다. Quarto Craft 디자인 시스템의 brand 토큰을 그대로 따르므로, 색상·타이포그래피·한국어 조판 규칙이 프로젝트의 다른 출력물(보고서·슬라이드·PDF)과 완전히 일관됩니다.\n\n\n\n\n\n\n힌트무엇이 다른가요?\n\n\n\n\nblog 템플릿: 글 목록(listing)을 자동 생성하는 블로그용\nwebsite 템플릿(이것): 정해진 페이지 몇 개로 구성된 사이트용 — 랜딩, 소개, 가이드"
+  },
+  {
+    "objectID": "index.html#소개",
+    "href": "index.html#소개",
+    "title": "Quarto Craft Website",
+    "section": "",
+    "text": "이 템플릿은 블로그가 아닌 일반 웹사이트(랜딩 페이지 · 제품 소개 · 문서 사이트)를 만들 때 사용합니다. Quarto Craft 디자인 시스템의 brand 토큰을 그대로 따르므로, 색상·타이포그래피·한국어 조판 규칙이 프로젝트의 다른 출력물(보고서·슬라이드·PDF)과 완전히 일관됩니다.\n\n\n\n\n\n\n힌트무엇이 다른가요?\n\n\n\n\nblog 템플릿: 글 목록(listing)을 자동 생성하는 블로그용\nwebsite 템플릿(이것): 정해진 페이지 몇 개로 구성된 사이트용 — 랜딩, 소개, 가이드"
+  },
+  {
+    "objectID": "index.html#주요-특징",
+    "href": "index.html#주요-특징",
+    "title": "Quarto Craft Website",
+    "section": "주요 특징",
+    "text": "주요 특징\n\n단일 브랜드 소스\n색상과 폰트는 모두 _brand.yml 한 파일에서 흐릅니다. 새 색을 추가하면 모든 페이지의 버튼·링크·강조 영역이 즉시 같이 바뀝니다.\n\n\n한국어 가독성\n\nword-break: keep-all — 단어 단위 줄바꿈\nline-height: 1.75 — 영문 대비 넓은 행간\nPretendard 가변 폰트 — 모든 굵기에서 일관된 한글 렌더링\n\n\n\n네비게이션 구조\nnavbar:\n  left:\n    - href: index.qmd\n      text: 홈\n    - href: about.qmd\n      text: 소개\n    - href: guide.qmd\n      text: 가이드\n상단 navbar에서 페이지를 추가하거나 순서를 바꿔 사이트 구조를 손쉽게 조정할 수 있습니다."
+  },
+  {
+    "objectID": "index.html#사용-방법",
+    "href": "index.html#사용-방법",
+    "title": "Quarto Craft Website",
+    "section": "사용 방법",
+    "text": "사용 방법\n# 1. templates/website/ 디렉토리 복사\ncp -r templates/website my-site\n\n# 2. 컨텐츠 수정\n$EDITOR my-site/index.qmd my-site/about.qmd my-site/guide.qmd\n\n# 3. 렌더\ncd my-site && quarto render"
+  },
+  {
+    "objectID": "index.html#다음-단계",
+    "href": "index.html#다음-단계",
+    "title": "Quarto Craft Website",
+    "section": "다음 단계",
+    "text": "다음 단계\n\n소개 페이지 — 사이트 정보와 사용 시나리오\n가이드 — 페이지 추가·네비게이션 구성·SEO 메타데이터"
+  }
+]

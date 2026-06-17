@@ -1,0 +1,110 @@
+---
+title: "Quarto Craft 기술 보고서"
+subtitle: "Typst 기반 한국어 PDF 템플릿"
+author: "작성자"
+date: today
+date-format: "YYYY년 MM월 DD일"
+abstract: |
+  이 문서는 Quarto Craft 디자인 시스템의 Typst PDF 템플릿입니다.
+  LaTeX 대비 빠른 컴파일 속도와 간결한 문법으로
+  한국어 PDF 문서를 생성합니다.
+---
+
+## 개요
+
+Typst는 LaTeX의 현대적 대안으로, Quarto 1.4+에서 공식 지원합니다.
+
+### Typst의 장점
+
+- **빠른 컴파일**: LaTeX 대비 10~100배 빠른 빌드
+- **한국어 기본 지원**: 별도 패키지 없이 한글 조판 가능
+- **간결한 문법**: 복잡한 LaTeX 명령 불필요
+- **폰트 자동 탐색**: 시스템 폰트 직접 사용
+
+## 타이포그래피 샘플
+
+### 본문 텍스트
+
+이것은 Pretendard Variable 폰트로 조판된 한국어 본문입니다.
+적절한 행간과 자간으로 인쇄물 수준의 가독성을 제공합니다.
+단어 단위 줄바꿈이 적용되어 한국어 텍스트가 자연스럽게 배치됩니다.
+
+### 인용문
+
+> 좋은 타이포그래피는 보이지 않는다.
+> 나쁜 타이포그래피는 어디에서나 보인다.
+>
+> --- Oliver Reichenstein
+
+### 목록
+
+**순서 없는 목록:**
+
+- 디자인 토큰 기반 색상 체계
+- Major Third (1.250) 타입 스케일
+- 4px 단위 간격 시스템
+
+**순서 있는 목록:**
+
+1. 프로젝트 구조 설계
+2. 디자인 토큰 정의
+3. 컴포넌트 스타일 구현
+4. 템플릿 생성 및 검증
+
+## 코드
+
+인라인 코드: `quarto render --to typst`
+
+코드 블록:
+
+```python
+import pandas as pd
+
+# 데이터 분석 예시
+df = pd.read_csv("data.csv")
+summary = df.groupby("category").agg(
+    count=("id", "count"),
+    mean_value=("value", "mean")
+)
+print(summary)
+```
+
+```r
+library(dplyr)
+
+# R 코드 예시
+mtcars |>
+  group_by(cyl) |>
+  summarise(
+    mean_mpg = mean(mpg),
+    sd_mpg = sd(mpg)
+  )
+```
+
+## 표
+
+| 토큰 | 값 | 용도 |
+|------|-----|------|
+| `$font-size-base` | 1rem (16px) | 본문 텍스트 |
+| `$font-size-lg` | 1.25rem (20px) | 강조 텍스트 |
+| `$font-size-2xl` | 1.953rem | H3 제목 |
+| `$font-size-4xl` | 3.052rem | H1 제목 |
+| `$line-height-normal` | 1.75 | 한국어 본문 행간 |
+| `$spacing-4` | 1rem (16px) | 기본 간격 |
+
+: Quarto Craft 주요 디자인 토큰
+
+## 수식
+
+인라인 수식: $E = mc^2$
+
+블록 수식:
+
+$$
+f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2\pi i \xi x} d\xi
+$$
+
+## 결론
+
+Typst 기반 PDF는 한국어 문서 작성에 있어 LaTeX보다 접근성이 높고,
+Quarto와의 통합을 통해 코드 실행 결과를 포함한 재현 가능한 문서를 생성할 수 있습니다.

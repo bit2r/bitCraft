@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "소개",
+    "section": "",
+    "text": "한국어 문서에 최적화된 Quarto Craft 디자인 시스템 블로그입니다.\nPretendard 가변 폰트와 인디고 브랜드 컬러를 기반으로 일관된 타이포그래피와 디자인을 제공합니다."
+  },
+  {
+    "objectID": "posts/2026-05-10-두번째-포스트/index.html",
+    "href": "posts/2026-05-10-두번째-포스트/index.html",
+    "title": "Typst PDF 북 만들기",
+    "section": "",
+    "text": "Quarto Craft 빌드 파이프라인 — qmd에서 HTML/PDF/RevealJS로"
+  },
+  {
+    "objectID": "posts/2026-05-10-두번째-포스트/index.html#quarto-1.9의-새-기능",
+    "href": "posts/2026-05-10-두번째-포스트/index.html#quarto-1.9의-새-기능",
+    "title": "Typst PDF 북 만들기",
+    "section": "Quarto 1.9의 새 기능",
+    "text": "Quarto 1.9의 새 기능\nQuarto 1.9부터 Typst 기반의 멀티 챕터 PDF 북을 공식 지원합니다.\n\nLaTeX 대비 Typst의 장점\n\n\n\n항목\nLaTeX\nTypst\n\n\n\n\n컴파일 속도\n느림\n매우 빠름\n\n\n한국어 지원\n패키지 필요\n기본 지원\n\n\n문법\n복잡\n간결\n\n\n\n\n\n한국어 조판 최적화\nQuarto Craft는 Typst 출력에서도 한국어 가독성 규칙을 적용합니다 — linestretch: 1.5 행간, Pretendard 폰트, D2Coding ligature 코드 폰트.\n\n\n\n한국어 조판 최적화 규칙\n\n\n\n\n설정 예시\nformat:\n  typst:\n    lang: ko\n    mainfont: \"Pretendard\"\n    toc: true\nHTML 웹북과 Typst PDF를 동시에 생성하려면 downloads: [pdf]를 _quarto.yml에 추가하면 됩니다."
+  },
+  {
+    "objectID": "posts/2026-05-01-첫번째-포스트/index.html",
+    "href": "posts/2026-05-01-첫번째-포스트/index.html",
+    "title": "Quarto Craft 소개",
+    "section": "",
+    "text": "Quarto Craft 색상 시스템 — Quarto Blue 팔레트"
+  },
+  {
+    "objectID": "posts/2026-05-01-첫번째-포스트/index.html#quarto-craft란",
+    "href": "posts/2026-05-01-첫번째-포스트/index.html#quarto-craft란",
+    "title": "Quarto Craft 소개",
+    "section": "Quarto Craft란?",
+    "text": "Quarto Craft란?\nQuarto Craft는 한국어 문서에 최적화된 Quarto 디자인 시스템입니다.\n\n주요 특징\n\nPretendard Variable 가변 폰트로 한글 렌더링 최적화\nword-break: keep-all로 단어 단위 줄바꿈\nline-height: 1.75 — 한국어에 적합한 넓은 행간\n9종 템플릿: 리포트 · 프레젠테이션 · 대시보드 · 책 · 원고 · 블로그 · 웹사이트 · Confluence · Typst PDF\n\n\n\n타입 스케일\nMajor Third(1.250)를 기반으로 한 8단계 폰트 스케일로 시각적 위계를 명확하게 표현합니다.\n\n\n\nMajor Third 타입 스케일\n\n\n\n\n9종 템플릿 생태계\n같은 _brand.yml 토큰을 공유하므로 HTML · RevealJS · Typst PDF가 색상·폰트·간격에서 완전히 일관됩니다.\n\n\n\n템플릿 생태계 — 단일 brand 토큰을 공유\n\n\n\n\n코드 예시\nlibrary(ggplot2)\n\nggplot(mtcars, aes(wt, mpg)) +\n  geom_point(color = \"#4080B7\") +  # quarto-blue-600\n  theme_minimal()"
+  },
+  {
+    "objectID": "posts/2026-05-01-첫번째-포스트/index.html#시작하기",
+    "href": "posts/2026-05-01-첫번째-포스트/index.html#시작하기",
+    "title": "Quarto Craft 소개",
+    "section": "시작하기",
+    "text": "시작하기\nquarto render templates/report/index.qmd"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "블로그",
+    "section": "",
+    "text": "Typst PDF 북 만들기\n\n\n\nTypst\n\nPDF\n\nBook\n\n\n\nQuarto 1.9+의 Typst 기반 PDF 북 기능을 소개합니다\n\n\n\n\n\n\n2026년 05월 10일\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Craft 소개\n\n\n\nQuarto\n\n디자인시스템\n\n\n\n한국어 최적화 Quarto 디자인 시스템을 소개합니다\n\n\n\n\n\n\n2026년 05월 01일\n\n\n\n\n\n\n일치 없음"
+  }
+]

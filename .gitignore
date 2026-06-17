@@ -1,0 +1,31 @@
+.quarto/
+.DS_Store
+.env
+*.log
+
+# iCloud 동기화 충돌 파일/폴더
+* 2.*
+* 3.*
+* 4.*
+* 2/
+* 3/
+*[Cc]opy*
+
+# 빌드 아티팩트
+*.tex
+templates/**/.gitignore
+
+# 로컬 전용 생성 콘텐츠
+preview/
+screenshots/
+slides/
+ui_kits/
+
+# 로컬 도구
+SKILL.md
+
+/.quarto/
+**/*.quarto_ipynb
+
+# 로컬 Claude 설정
+.claude/

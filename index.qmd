@@ -1,0 +1,105 @@
+---
+title: "Quarto Craft"
+subtitle: "한국어 문서에 최적화된 Quarto 디자인 시스템"
+toc: false
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com
+---
+
+## 9종 템플릿
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### [Report](templates/report/index.html)
+단일 HTML 보고서 — TOC, 각주, 수식, 표 강조
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Presentation](templates/presentation/index.html)
+RevealJS 슬라이드 — 16:9, 그라데이션 표지
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Dashboard](templates/dashboard/index.html)
+인터랙티브 대시보드 — 카드·차트·KPI
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Book](templates/book/index.html)
+HTML + Typst PDF 책 — 챕터·다운로드 지원
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Manuscript](templates/manuscript/index.html)
+학술 원고 — bib·preview·PDF 동시 출력
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Blog](templates/blog/index.html)
+블로그 listing — 자동 글 목록·태그
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Website](templates/website/index.html)
+일반 웹사이트 — 랜딩·소개·가이드
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Confluence](templates/confluence/index.html)
+Confluence 게시용 마크업
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Typst PDF](templates/typst-pdf/index.pdf)
+Typst 기반 한국어 PDF — 1.5 행간
+:::
+
+:::
+
+## 디자인 시스템
+
+| 항목 | 값 |
+|------|-----|
+| Primary | `quarto-blue-400` (`#74AADB`) |
+| Link | `quarto-blue-600` (`#4080B7`) |
+| 본문 폰트 | Pretendard |
+| 코드 폰트 | D2Coding ligature · JetBrains Mono |
+| 타입 스케일 | Major Third (1.250) |
+| 행간 (한국어) | 1.75 (web) · 1.5 (typst) |
+
+## 핵심 아키텍처
+
+::: {.callout-note}
+## 단일 브랜드 소스 (`_brand.yml`)
+HTML · RevealJS · Typst PDF가 같은 색상·폰트 토큰을 공유합니다.
+`_brand.yml` 한 곳을 바꾸면 9개 템플릿이 동시에 갱신됩니다.
+:::
+
+```
+quarto-craft/
+├── _brand.yml                    # 색상·폰트·타이포 토큰 (SSOT)
+├── scss/
+│   ├── quarto-theme.scss         # HTML 컴포넌트 규칙
+│   └── quarto-revealjs.scss      # 슬라이드 전용 규칙
+├── assets/brand/                 # 로고·파비콘
+├── templates/                    # 9종 템플릿
+└── docs/                         # 렌더 결과 (GitHub Pages)
+```
+
+## 시작하기
+
+```bash
+git clone https://github.com/.../quarto-craft.git
+cd quarto-craft
+
+# 전체 템플릿 렌더
+quarto render
+
+# 특정 템플릿만
+cd templates/website && quarto render
+```

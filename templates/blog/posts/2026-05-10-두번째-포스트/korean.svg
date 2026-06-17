@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Pretendard Variable', Pretendard, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #171717; letter-spacing: -0.02em; }
+    .subtitle { font-size: 11px; fill: #525252; font-style: italic; font-family: 'Noto Serif KR', Georgia, serif; }
+    .section { font-size: 11px; font-weight: 600; fill: #262626; letter-spacing: 0.05em; text-transform: uppercase; }
+    .col-label { font-size: 9px; fill: #737373; font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+    .meta { font-size: 9px; fill: #525252; font-family: 'JetBrains Mono', monospace; }
+    .note { font-size: 10px; fill: #525252; font-style: italic; font-family: 'Noto Serif KR', Georgia, serif; }
+    .axis { stroke: #D4D4D4; stroke-width: 0.5; }
+    .frame { fill: none; stroke: #D4D4D4; stroke-width: 0.5; }
+    .frame-bad { fill: none; stroke: #EF4444; stroke-width: 0.5; stroke-dasharray: 3,2; }
+    .frame-good { fill: none; stroke: #10B981; stroke-width: 0.6; }
+    .baseline { stroke: #E5E5E5; stroke-width: 0.4; }
+    .body-text { fill: #171717; font-size: 13px; }
+    .body-text-en { fill: #171717; font-size: 13px; }
+  </style>
+
+  <rect width="900" height="620" fill="#FFFFFF"/>
+
+  <text x="40" y="40" class="title">Quarto Craft · 한국어 타이포그래피 최적화</text>
+  <text x="40" y="56" class="subtitle">기본값 vs 한글 최적화 — 동일한 콘텐츠를 세 가지 조정으로 비교</text>
+  <line x1="40" y1="68" x2="860" y2="68" class="axis"/>
+
+  <!-- Section 1: line-height -->
+  <text x="40" y="100" class="section">① line-height · 행간</text>
+  <text x="40" y="115" class="note">한글은 영문보다 글자 높이가 크다. 1.5는 답답하고, 1.75는 호흡이 트인다.</text>
+
+  <!-- Before -->
+  <g transform="translate(40, 130)">
+    <text x="0" y="0" class="col-label">BEFORE · line-height: 1.5</text>
+    <rect class="frame-bad" x="0" y="8" width="380" height="100"/>
+    <text x="12" y="28" class="body-text">디자인 토큰은 색상, 타이포그래피, 간격을</text>
+    <text x="12" y="48" class="body-text">정의하는 단일 출처입니다. 한 번 정의하면</text>
+    <text x="12" y="68" class="body-text">모든 템플릿에서 일관되게 적용됩니다. 한국</text>
+    <text x="12" y="88" class="body-text">어 문서에 최적화된 시스템입니다.</text>
+  </g>
+
+  <!-- After -->
+  <g transform="translate(460, 130)">
+    <text x="0" y="0" class="col-label">AFTER · line-height: 1.75 ← 한글 최적</text>
+    <rect class="frame-good" x="0" y="8" width="380" height="118"/>
+    <text x="12" y="32" class="body-text">디자인 토큰은 색상, 타이포그래피, 간격을</text>
+    <text x="12" y="56" class="body-text">정의하는 단일 출처입니다. 한 번 정의하면</text>
+    <text x="12" y="80" class="body-text">모든 템플릿에서 일관되게 적용됩니다. 한국</text>
+    <text x="12" y="104" class="body-text">어 문서에 최적화된 시스템입니다.</text>
+  </g>
+
+  <!-- Section 2: word-break -->
+  <text x="40" y="290" class="section">② word-break · 줄바꿈</text>
+  <text x="40" y="305" class="note">기본값은 문자 단위로 끊어 단어가 잘린다. keep-all은 단어 단위로 줄바꿈한다.</text>
+
+  <!-- Before -->
+  <g transform="translate(40, 320)">
+    <text x="0" y="0" class="col-label">BEFORE · word-break: normal</text>
+    <rect class="frame-bad" x="0" y="8" width="380" height="76"/>
+    <text x="12" y="28" class="body-text">Pretendard Variable은 한글 가변</text>
+    <text x="12" y="48" class="body-text">폰트로 다양한 굵기를 단일 파일에서 지원합</text>
+    <text x="12" y="68" class="body-text">니다.</text>
+    <rect fill="none" stroke="#EF4444" stroke-width="0.8" x="227" y="36" width="42" height="16"/>
+    <text x="248" y="48" class="body-text" font-weight="700" fill="#EF4444" text-anchor="middle">지원합</text>
+  </g>
+
+  <!-- After -->
+  <g transform="translate(460, 320)">
+    <text x="0" y="0" class="col-label">AFTER · word-break: keep-all ← 단어 보존</text>
+    <rect class="frame-good" x="0" y="8" width="380" height="76"/>
+    <text x="12" y="28" class="body-text">Pretendard Variable은 한글 가변</text>
+    <text x="12" y="48" class="body-text">폰트로 다양한 굵기를 단일 파일에서</text>
+    <text x="12" y="68" class="body-text">지원합니다.</text>
+    <rect class="frame-good" x="6" y="56" width="60" height="16"/>
+  </g>
+
+  <!-- Section 3: letter-spacing -->
+  <text x="40" y="438" class="section">③ letter-spacing · 자간</text>
+  <text x="40" y="453" class="note">큰 제목에서 한글은 자간이 벌어져 보인다. -0.02em이 자연스러운 균형을 만든다.</text>
+
+  <g transform="translate(40, 470)">
+    <text x="0" y="0" class="col-label">BEFORE · letter-spacing: 0</text>
+    <text x="0" y="36" font-size="32" font-weight="700" fill="#171717">한국어 문서 타이포그래피</text>
+    <line x1="0" y1="46" x2="380" y2="46" class="frame-bad"/>
+    <text x="0" y="62" class="meta">자간이 벌어져 단어 응집감이 떨어진다</text>
+  </g>
+
+  <g transform="translate(460, 470)">
+    <text x="0" y="0" class="col-label">AFTER · letter-spacing: -0.02em ← 한글 균형</text>
+    <text x="0" y="36" font-size="32" font-weight="700" fill="#171717" letter-spacing="-0.6">한국어 문서 타이포그래피</text>
+    <line x1="0" y1="46" x2="370" y2="46" class="frame-good"/>
+    <text x="0" y="62" class="meta">균형 잡힌 자간으로 시선이 모인다</text>
+  </g>
+
+  <!-- Summary -->
+  <line x1="40" y1="560" x2="860" y2="560" class="axis"/>
+  <text x="40" y="582" class="section">SCSS 토큰 요약</text>
+  <g transform="translate(40, 592)" font-family="'JetBrains Mono', monospace" font-size="10">
+    <text x="0" y="14">
+      <tspan fill="#1E5688" font-weight="700">$line-height-normal:  1.75</tspan>
+      <tspan fill="#737373">  // 한글 본문</tspan>
+    </text>
+    <text x="280" y="14">
+      <tspan fill="#1E5688" font-weight="700">word-break: keep-all</tspan>
+      <tspan fill="#737373">  // 모든 본문</tspan>
+    </text>
+    <text x="560" y="14">
+      <tspan fill="#1E5688" font-weight="700">$letter-spacing-tight: -0.02em</tspan>
+    </text>
+  </g>
+</svg>

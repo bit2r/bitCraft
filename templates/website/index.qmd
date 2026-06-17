@@ -1,0 +1,64 @@
+---
+title: "Quarto Craft Website"
+subtitle: "한국어 최적화 일반 웹사이트 템플릿"
+toc: false
+---
+
+## 소개
+
+이 템플릿은 블로그가 아닌 **일반 웹사이트**(랜딩 페이지 · 제품 소개 · 문서 사이트)를 만들 때 사용합니다.
+Quarto Craft 디자인 시스템의 brand 토큰을 그대로 따르므로, 색상·타이포그래피·한국어 조판 규칙이
+프로젝트의 다른 출력물(보고서·슬라이드·PDF)과 완전히 일관됩니다.
+
+::: {.callout-tip}
+## 무엇이 다른가요?
+
+- **blog** 템플릿: 글 목록(listing)을 자동 생성하는 블로그용
+- **website** 템플릿(이것): 정해진 페이지 몇 개로 구성된 사이트용 — 랜딩, 소개, 가이드
+:::
+
+## 주요 특징
+
+### 단일 브랜드 소스
+
+색상과 폰트는 모두 `_brand.yml` 한 파일에서 흐릅니다. 새 색을 추가하면 모든 페이지의
+버튼·링크·강조 영역이 즉시 같이 바뀝니다.
+
+### 한국어 가독성
+
+- `word-break: keep-all` — 단어 단위 줄바꿈
+- `line-height: 1.75` — 영문 대비 넓은 행간
+- Pretendard 가변 폰트 — 모든 굵기에서 일관된 한글 렌더링
+
+### 네비게이션 구조
+
+```yaml
+navbar:
+  left:
+    - href: index.qmd
+      text: 홈
+    - href: about.qmd
+      text: 소개
+    - href: guide.qmd
+      text: 가이드
+```
+
+상단 navbar에서 페이지를 추가하거나 순서를 바꿔 사이트 구조를 손쉽게 조정할 수 있습니다.
+
+## 사용 방법
+
+```bash
+# 1. templates/website/ 디렉토리 복사
+cp -r templates/website my-site
+
+# 2. 컨텐츠 수정
+$EDITOR my-site/index.qmd my-site/about.qmd my-site/guide.qmd
+
+# 3. 렌더
+cd my-site && quarto render
+```
+
+## 다음 단계
+
+- [소개 페이지](about.qmd) — 사이트 정보와 사용 시나리오
+- [가이드](guide.qmd) — 페이지 추가·네비게이션 구성·SEO 메타데이터

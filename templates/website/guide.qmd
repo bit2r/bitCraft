@@ -1,0 +1,113 @@
+---
+title: "가이드"
+subtitle: "페이지 추가 · 네비게이션 구성 · 메타데이터"
+---
+
+## 페이지 추가
+
+새 `.qmd` 파일을 만들고 navbar에 등록합니다.
+
+### 1) 파일 생성
+
+```bash
+touch pricing.qmd
+```
+
+### 2) frontmatter 작성
+
+```yaml
+---
+title: "요금제"
+subtitle: "필요에 맞는 플랜을 선택하세요"
+---
+```
+
+### 3) navbar 등록
+
+`_quarto.yml`의 `website.navbar.left`에 추가:
+
+```yaml
+navbar:
+  left:
+    - href: index.qmd
+      text: 홈
+    - href: pricing.qmd
+      text: 요금제          # 새 항목
+    - href: about.qmd
+      text: 소개
+```
+
+## 네비게이션 옵션
+
+### 드롭다운 메뉴
+
+```yaml
+navbar:
+  left:
+    - text: 제품
+      menu:
+        - href: product-a.qmd
+          text: Product A
+        - href: product-b.qmd
+          text: Product B
+```
+
+### 사이드바 (좌측 목차)
+
+페이지 수가 많아지면 navbar 대신 sidebar를 사용합니다.
+
+```yaml
+website:
+  sidebar:
+    style: docked
+    contents:
+      - index.qmd
+      - section: 시작하기
+        contents:
+          - getting-started.qmd
+          - installation.qmd
+```
+
+## SEO 메타데이터
+
+`_quarto.yml`에 사이트 전체 메타데이터를 설정합니다.
+
+```yaml
+website:
+  title: "Quarto Craft"
+  description: "한국어 최적화 Quarto 디자인 시스템"
+  open-graph: true
+  twitter-card:
+    creator: "@yourhandle"
+```
+
+각 페이지 frontmatter에서 개별 오버라이드 가능:
+
+```yaml
+---
+title: "요금제"
+description: "필요에 맞는 플랜을 선택하세요"
+image: thumb-pricing.png
+---
+```
+
+## brand 토큰 직접 사용
+
+CSS에서 brand 색상을 직접 참조할 수 있습니다.
+
+```css
+.cta-button {
+  background: var(--bs-primary);  /* quarto-blue-400 */
+  color: white;
+}
+.cta-button:hover {
+  background: var(--bs-link-color);  /* quarto-blue-600 */
+}
+```
+
+## 배포
+
+```bash
+quarto render          # docs/templates/website/ 에 출력
+quarto publish gh-pages  # GitHub Pages로 배포
+```

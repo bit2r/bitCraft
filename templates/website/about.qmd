@@ -1,0 +1,41 @@
+---
+title: "소개"
+subtitle: "Quarto Craft Website 템플릿이 어떤 용도인지"
+---
+
+## 어떤 사이트에 적합한가
+
+이 템플릿은 **콘텐츠 양이 정해져 있고 구조가 단순한 사이트**에 적합합니다.
+
+| 사용 예 | 적합 여부 |
+|---------|:--------:|
+| 제품/서비스 랜딩 페이지 | ✅ |
+| 팀 소개 사이트 | ✅ |
+| 오픈소스 라이브러리 문서 사이트 (소규모) | ✅ |
+| 컨퍼런스/이벤트 사이트 | ✅ |
+| 블로그 (글 목록 필요) | ❌ → `blog` 템플릿 |
+| 책 (챕터·다운로드) | ❌ → `book` 템플릿 |
+| 대시보드 | ❌ → `dashboard` 템플릿 |
+
+## 디자인 시스템
+
+| 항목 | 값 |
+|------|-----|
+| Primary 색상 | `quarto-blue-400` (`#74AADB`) |
+| Link 색상 | `quarto-blue-600` (`#4080B7`) |
+| 본문 폰트 | Pretendard |
+| 코드 폰트 | D2Coding ligature |
+| 행간 | 1.75 (한국어 최적화) |
+
+## 호환되는 다른 템플릿
+
+같은 `_brand.yml`을 공유하므로, 다음 출력물과 시각적으로 완전히 통일됩니다.
+
+- **report** — 단일 HTML 보고서
+- **presentation** — RevealJS 슬라이드
+- **dashboard** — 인터랙티브 대시보드
+- **book** — HTML + Typst PDF 책
+- **manuscript** — 학술 원고
+- **blog** — 블로그 listing
+- **confluence** — Confluence 게시
+- **typst-pdf** — Typst 기반 한국어 PDF

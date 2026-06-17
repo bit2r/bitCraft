@@ -1,0 +1,270 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 920" font-family="'Pretendard Variable', Pretendard, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #171717; letter-spacing: -0.02em; }
+    .subtitle { font-size: 11px; fill: #525252; font-style: italic; font-family: 'Noto Serif KR', Georgia, serif; }
+    .section { font-size: 11px; font-weight: 600; fill: #262626; letter-spacing: 0.05em; text-transform: uppercase; }
+    .tpl-name { font-size: 12px; font-weight: 600; fill: #171717; }
+    .tpl-format { font-size: 8px; fill: #2D6BA0; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; }
+    .tpl-desc { font-size: 9px; fill: #525252; font-family: 'Noto Serif KR', Georgia, serif; font-style: italic; }
+    .meta { font-size: 9px; fill: #737373; font-family: 'JetBrains Mono', monospace; }
+    .note { font-size: 10px; fill: #525252; font-style: italic; font-family: 'Noto Serif KR', Georgia, serif; }
+    .axis { stroke: #D4D4D4; stroke-width: 0.5; }
+    .frame { fill: none; stroke: #262626; stroke-width: 0.5; }
+    .frame-fill { fill: #FFFFFF; stroke: #262626; stroke-width: 0.5; }
+    .ink { fill: #404040; }
+    .ink-light { fill: #A3A3A3; }
+    .accent { fill: #1E5688; }
+  </style>
+
+  <rect width="900" height="920" fill="#FFFFFF"/>
+
+  <text x="40" y="40" class="title">Quarto Craft · 템플릿 에코시스템</text>
+  <text x="40" y="56" class="subtitle">9개 문서 유형 · _brand.yml 단일 토큰으로 통합</text>
+  <line x1="40" y1="68" x2="860" y2="68" class="axis"/>
+
+  <!-- Row 1 -->
+  <!-- report -->
+  <g transform="translate(40, 90)">
+    <rect class="frame-fill" x="0" y="0" width="180" height="120"/>
+    <rect class="accent" x="12" y="14" width="60" height="4"/>
+    <rect class="ink" x="12" y="26" width="100" height="6"/>
+    <rect class="ink-light" x="12" y="44" width="156" height="2"/>
+    <rect class="ink-light" x="12" y="50" width="156" height="2"/>
+    <rect class="ink-light" x="12" y="56" width="120" height="2"/>
+    <rect class="ink-light" x="12" y="70" width="156" height="2"/>
+    <rect class="ink-light" x="12" y="76" width="140" height="2"/>
+    <rect class="ink" x="12" y="92" width="40" height="3"/>
+    <rect class="ink-light" x="12" y="100" width="156" height="2"/>
+    <rect class="ink-light" x="12" y="106" width="100" height="2"/>
+
+    <text x="0" y="138" class="tpl-name">Report</text>
+    <text x="0" y="150" class="tpl-format">format: html</text>
+    <text x="0" y="164" class="tpl-desc">표준 HTML 보고서 · TOC · 각주</text>
+  </g>
+
+  <!-- presentation -->
+  <g transform="translate(240, 90)">
+    <rect class="frame-fill" x="0" y="0" width="180" height="120"/>
+    <rect x="0" y="0" width="180" height="120" fill="#1E5688"/>
+    <rect fill="#FFFFFF" x="14" y="22" width="40" height="2" opacity="0.5"/>
+    <rect fill="#FFFFFF" x="14" y="34" width="100" height="8"/>
+    <rect fill="#FFFFFF" x="14" y="48" width="80" height="4" opacity="0.7"/>
+    <rect fill="#FFFFFF" x="14" y="100" width="20" height="2" opacity="0.5"/>
+    <text x="160" y="116" font-size="8" fill="#FFFFFF" opacity="0.6" font-family="'JetBrains Mono', monospace">3/24</text>
+
+    <text x="0" y="138" class="tpl-name">Presentation</text>
+    <text x="0" y="150" class="tpl-format">format: revealjs</text>
+    <text x="0" y="164" class="tpl-desc">슬라이드 · 섹션 구분 · 한글 폰트</text>
+  </g>
+
+  <!-- dashboard -->
+  <g transform="translate(440, 90)">
+    <rect class="frame-fill" x="0" y="0" width="180" height="120"/>
+    <rect class="ink" x="0" y="0" width="180" height="14"/>
+    <text x="8" y="10" font-size="8" fill="#FFFFFF">Dashboard</text>
+
+    <rect class="frame" x="10" y="22" width="50" height="32"/>
+    <text x="14" y="36" font-size="14" font-weight="700" fill="#1E5688">42K</text>
+    <text x="14" y="46" font-size="6" fill="#737373" font-family="'JetBrains Mono', monospace">USERS</text>
+
+    <rect class="frame" x="66" y="22" width="50" height="32"/>
+    <text x="70" y="36" font-size="14" font-weight="700" fill="#10B981">+12%</text>
+    <text x="70" y="46" font-size="6" fill="#737373" font-family="'JetBrains Mono', monospace">GROWTH</text>
+
+    <rect class="frame" x="122" y="22" width="48" height="32"/>
+    <text x="126" y="36" font-size="14" font-weight="700" fill="#F59E0B">98</text>
+    <text x="126" y="46" font-size="6" fill="#737373" font-family="'JetBrains Mono', monospace">SCORE</text>
+
+    <rect class="frame" x="10" y="62" width="160" height="48"/>
+    <polyline fill="none" stroke="#1E5688" stroke-width="1"
+              points="20,98 35,90 50,92 65,80 80,84 95,72 110,76 125,64 140,68 155,56 165,60"/>
+    <line x1="20" y1="100" x2="165" y2="100" class="axis"/>
+
+    <text x="0" y="138" class="tpl-name">Dashboard</text>
+    <text x="0" y="150" class="tpl-format">format: dashboard</text>
+    <text x="0" y="164" class="tpl-desc">KPI · 차트 · 인터랙티브</text>
+  </g>
+
+  <!-- book -->
+  <g transform="translate(640, 90)">
+    <rect class="frame-fill" x="0" y="0" width="180" height="120"/>
+    <rect class="frame" x="0" y="0" width="50" height="120" fill="#FAFAFA"/>
+    <rect class="accent" x="6" y="10" width="20" height="3"/>
+    <rect class="ink" x="6" y="22" width="36" height="2"/>
+    <rect class="ink-light" x="6" y="30" width="36" height="2"/>
+    <rect class="ink-light" x="6" y="36" width="28" height="2"/>
+    <rect class="accent" x="6" y="46" width="36" height="2"/>
+    <rect class="ink-light" x="6" y="52" width="36" height="2"/>
+    <rect class="ink-light" x="6" y="58" width="28" height="2"/>
+    <rect class="ink-light" x="6" y="70" width="36" height="2"/>
+    <rect class="ink-light" x="6" y="76" width="32" height="2"/>
+
+    <rect class="ink" x="64" y="14" width="60" height="6"/>
+    <rect class="ink-light" x="64" y="30" width="100" height="2"/>
+    <rect class="ink-light" x="64" y="36" width="100" height="2"/>
+    <rect class="ink-light" x="64" y="42" width="80" height="2"/>
+    <rect class="ink-light" x="64" y="56" width="100" height="2"/>
+    <rect class="ink-light" x="64" y="62" width="100" height="2"/>
+    <rect class="ink-light" x="64" y="68" width="60" height="2"/>
+    <rect class="ink" x="64" y="82" width="40" height="3"/>
+    <rect class="ink-light" x="64" y="92" width="100" height="2"/>
+    <rect class="ink-light" x="64" y="98" width="84" height="2"/>
+
+    <text x="0" y="138" class="tpl-name">Book</text>
+    <text x="0" y="150" class="tpl-format">type: book · html + typst</text>
+    <text x="0" y="164" class="tpl-desc">웹북 + PDF · 챕터 · 사이드바</text>
+  </g>
+
+  <!-- Row 2 -->
+  <!-- manuscript -->
+  <g transform="translate(40, 290)">
+    <rect class="frame-fill" x="0" y="0" width="180" height="120"/>
+    <rect class="accent" x="20" y="14" width="100" height="3"/>
+    <rect class="ink" x="20" y="22" width="140" height="6"/>
+    <rect class="ink-light" x="20" y="34" width="80" height="2"/>
+    <text x="20" y="48" font-size="6" fill="#737373" font-family="'JetBrains Mono', monospace">Abstract</text>
+    <rect class="ink-light" x="20" y="54" width="140" height="1.5"/>
+    <rect class="ink-light" x="20" y="58" width="140" height="1.5"/>
+    <rect class="ink-light" x="20" y="62" width="120" height="1.5"/>
+    <text x="20" y="76" font-size="6" fill="#737373" font-family="'JetBrains Mono', monospace">1. Introduction</text>
+    <rect class="ink-light" x="20" y="82" width="140" height="1.5"/>
+    <rect class="ink-light" x="20" y="86" width="140" height="1.5"/>
+    <rect class="ink-light" x="20" y="90" width="100" height="1.5"/>
+    <rect class="ink-light" x="20" y="98" width="140" height="1.5"/>
+    <rect class="ink-light" x="20" y="102" width="80" height="1.5"/>
+
+    <text x="0" y="138" class="tpl-name">Manuscript</text>
+    <text x="0" y="150" class="tpl-format">type: manuscript</text>
+    <text x="0" y="164" class="tpl-desc">학술 원고 · 인용 · Notebooks</text>
+  </g>
+
+  <!-- blog -->
+  <g transform="translate(240, 290)">
+    <rect class="frame-fill" x="0" y="0" width="180" height="120"/>
+    <rect class="ink" x="0" y="0" width="180" height="14"/>
+    <text x="8" y="10" font-size="8" fill="#FFFFFF">Blog</text>
+
+    <rect class="frame" x="8" y="22" width="78" height="42"/>
+    <rect class="ink-light" x="14" y="46" width="50" height="2"/>
+    <rect class="ink" x="14" y="52" width="66" height="3"/>
+    <rect class="ink-light" x="14" y="58" width="40" height="2"/>
+
+    <rect class="frame" x="94" y="22" width="78" height="42"/>
+    <rect class="ink-light" x="100" y="46" width="50" height="2"/>
+    <rect class="ink" x="100" y="52" width="66" height="3"/>
+    <rect class="ink-light" x="100" y="58" width="40" height="2"/>
+
+    <rect class="frame" x="8" y="72" width="78" height="42"/>
+    <rect class="ink-light" x="14" y="96" width="50" height="2"/>
+    <rect class="ink" x="14" y="102" width="66" height="3"/>
+    <rect class="ink-light" x="14" y="108" width="40" height="2"/>
+
+    <rect class="frame" x="94" y="72" width="78" height="42"/>
+    <rect class="ink-light" x="100" y="96" width="50" height="2"/>
+    <rect class="ink" x="100" y="102" width="66" height="3"/>
+    <rect class="ink-light" x="100" y="108" width="40" height="2"/>
+
+    <text x="0" y="138" class="tpl-name">Blog</text>
+    <text x="0" y="150" class="tpl-format">type: website · listing</text>
+    <text x="0" y="164" class="tpl-desc">그리드 · 카테고리 · RSS</text>
+  </g>
+
+  <!-- confluence -->
+  <g transform="translate(440, 290)">
+    <rect class="frame-fill" x="0" y="0" width="180" height="120"/>
+    <rect class="ink" x="12" y="14" width="80" height="5"/>
+    <rect class="ink-light" x="12" y="24" width="50" height="2"/>
+
+    <rect fill="#C6DDEF" x="12" y="36" width="156" height="18" stroke="#1E5688" stroke-width="0.5"/>
+    <text x="20" y="48" font-size="8" fill="#114571">⚑ Confluence Note</text>
+
+    <rect class="ink-light" x="12" y="62" width="156" height="2"/>
+    <rect class="ink-light" x="12" y="68" width="156" height="2"/>
+    <rect class="ink-light" x="12" y="74" width="100" height="2"/>
+
+    <rect class="frame" x="12" y="84" width="156" height="22"/>
+    <line x1="48" y1="84" x2="48" y2="106" stroke="#262626" stroke-width="0.5"/>
+    <line x1="100" y1="84" x2="100" y2="106" stroke="#262626" stroke-width="0.5"/>
+    <line x1="140" y1="84" x2="140" y2="106" stroke="#262626" stroke-width="0.5"/>
+    <line x1="12" y1="92" x2="168" y2="92" stroke="#262626" stroke-width="0.5"/>
+
+    <text x="0" y="138" class="tpl-name">Confluence</text>
+    <text x="0" y="150" class="tpl-format">publish: confluence</text>
+    <text x="0" y="164" class="tpl-desc">위키 게시 · 표 · 콜아웃</text>
+  </g>
+
+  <!-- typst-pdf -->
+  <g transform="translate(640, 290)">
+    <rect class="frame-fill" x="0" y="0" width="180" height="120"/>
+    <rect class="accent" x="24" y="12" width="60" height="2"/>
+    <text x="24" y="26" font-size="11" font-weight="700" fill="#171717" font-family="'Noto Serif KR', Georgia, serif">제목</text>
+    <rect class="ink-light" x="24" y="34" width="40" height="1.5"/>
+
+    <rect class="ink-light" x="24" y="48" width="132" height="1.5"/>
+    <rect class="ink-light" x="24" y="53" width="132" height="1.5"/>
+    <rect class="ink-light" x="24" y="58" width="100" height="1.5"/>
+    <rect class="ink-light" x="24" y="66" width="132" height="1.5"/>
+    <rect class="ink-light" x="24" y="71" width="132" height="1.5"/>
+    <rect class="ink-light" x="24" y="76" width="116" height="1.5"/>
+    <rect class="ink-light" x="24" y="84" width="132" height="1.5"/>
+    <rect class="ink-light" x="24" y="89" width="60" height="1.5"/>
+
+    <text x="86" y="112" font-size="7" fill="#737373" font-family="'JetBrains Mono', monospace">— 1 —</text>
+
+    <text x="0" y="138" class="tpl-name">Typst PDF</text>
+    <text x="0" y="150" class="tpl-format">format: typst</text>
+    <text x="0" y="164" class="tpl-desc">고품질 PDF · Typst 엔진</text>
+  </g>
+
+  <!-- Row 3 -->
+  <!-- website -->
+  <g transform="translate(40, 490)">
+    <rect class="frame-fill" x="0" y="0" width="180" height="120"/>
+    <rect class="ink" x="0" y="0" width="180" height="14"/>
+    <text x="8" y="10" font-size="8" fill="#FFFFFF">Website</text>
+    <rect fill="#FFFFFF" x="100" y="4" width="20" height="6" opacity="0.6"/>
+    <rect fill="#FFFFFF" x="125" y="4" width="20" height="6" opacity="0.6"/>
+    <rect fill="#FFFFFF" x="150" y="4" width="20" height="6" opacity="0.6"/>
+
+    <rect class="accent" x="12" y="26" width="80" height="4"/>
+    <rect class="ink" x="12" y="36" width="140" height="6"/>
+    <rect class="ink-light" x="12" y="50" width="100" height="2"/>
+
+    <rect class="frame" x="12" y="62" width="50" height="32"/>
+    <rect class="ink-light" x="16" y="80" width="40" height="2"/>
+    <rect class="ink" x="16" y="86" width="30" height="2"/>
+
+    <rect class="frame" x="66" y="62" width="50" height="32"/>
+    <rect class="ink-light" x="70" y="80" width="40" height="2"/>
+    <rect class="ink" x="70" y="86" width="30" height="2"/>
+
+    <rect class="frame" x="120" y="62" width="50" height="32"/>
+    <rect class="ink-light" x="124" y="80" width="40" height="2"/>
+    <rect class="ink" x="124" y="86" width="30" height="2"/>
+
+    <rect class="ink-light" x="12" y="104" width="156" height="2"/>
+
+    <text x="0" y="138" class="tpl-name">Website</text>
+    <text x="0" y="150" class="tpl-format">type: website</text>
+    <text x="0" y="164" class="tpl-desc">멀티페이지 사이트 · 랜딩 · 가이드</text>
+  </g>
+
+  <line x1="40" y1="700" x2="860" y2="700" class="axis"/>
+
+  <!-- Render Pipeline Note -->
+  <text x="40" y="728" class="section">출력 구조</text>
+  <g transform="translate(40, 750)" font-family="'JetBrains Mono', monospace" font-size="10" fill="#404040">
+    <text x="0"   y="0">docs/templates/</text>
+    <text x="20"  y="24">├── report/index.html</text>
+    <text x="20"  y="46">├── presentation/index.html       <tspan fill="#737373">(revealjs)</tspan></text>
+    <text x="20"  y="68">├── dashboard/index.html          <tspan fill="#737373">(dashboard)</tspan></text>
+    <text x="20"  y="90">├── book/                         <tspan fill="#737373">→ html + PDF</tspan></text>
+    <text x="20"  y="112">└── website/                       <tspan fill="#737373">→ multi-page site</tspan></text>
+    <text x="440" y="24">manuscript/                     <tspan fill="#737373">→ html + Typst</tspan></text>
+    <text x="440" y="46">blog/                           <tspan fill="#737373">→ listing site</tspan></text>
+    <text x="440" y="68">confluence/index.html           <tspan fill="#737373">(→ Confluence)</tspan></text>
+    <text x="440" y="90">typst-pdf/index.pdf             <tspan fill="#737373">(typst)</tspan></text>
+  </g>
+
+  <line x1="40" y1="900" x2="860" y2="900" class="axis"/>
+</svg>
