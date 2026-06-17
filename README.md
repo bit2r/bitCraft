@@ -18,7 +18,7 @@ LaTeX 매크로가 아닌 Typst 네이티브로 다시 구현했다.
 ## 설치
 
 ```bash
-quarto add statkclee/bitCraft
+quarto add bit2r/bitCraft
 ```
 
 ## 사용
