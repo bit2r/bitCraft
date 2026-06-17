@@ -1,0 +1,39 @@
+project:
+  # 산출물은 저장소 루트 docs/ 로. GitHub Pages 가 /docs 에서 서빙한다.
+  output-dir: ../../docs
+
+format:
+  typst:
+    # lang: ko — 그림/표/목차 레이블을 한국어로(네이티브). 별도 패키지 불필요.
+    lang: ko
+    # 한글 본문 폰트(자기완결: _brand.yml 등 외부 참조 없이 인라인).
+    mainfont: "Pretendard"
+    monofont: "D2Coding ligature"
+    fontsize: 11pt
+    linestretch: 1.5
+    toc: true
+    number-sections: true
+    # 참고문헌(BibTeX) — pandoc citeproc 로 본문 인용·목록 생성(저자-연도).
+    #  citeproc: true 로 Typst 네이티브 bibliography(IEEE 숫자식·자동 제목) 대신
+    #  pandoc 이 #refs 위치에 목록을 넣게 한다 → 제목 중복·항목 누락 방지.
+    bibliography: references.bib
+    citeproc: true
+    #  csl: 영문 출처 목록이라 citeproc 로캘만 en-US 로 고정(default-locale).
+    #  Typst lang:ko 라벨(그림·표·목차·방정식·참고문헌)은 그대로 유지된다.
+    csl: chicago-author-date.csl
+    margin:
+      x: 2.5cm
+      y: 2.5cm
+    columns: 1
+    # preamble 주입 (순서대로):
+    #  1) 한글 어절 보호 — 한글 포함 토큰만 box 로 묶어 어절 중간 줄바꿈 방지.
+    #     ⚠ 전역 \S+ 는 수식 원자 간격까지 깨므로 한글 토큰([가-힣])만 대상(GOTCHA §6).
+    #  2) 인용문 본문은 명조(Noto Serif KR)로 — 한국어 인용 관행.
+    #  3) 자동 조사 함수(_josa.typ) — #josa(), #eun-neun() 등을 본문에서 호출 가능.
+    #  4) TeX/LaTeX 워드마크(_logo.typ) — "LaTeX"·"TeX" 표기를 고전 로고 자형으로.
+    include-in-header:
+      - text: |
+          #show regex("\S*[가-힣]\S*"): it => box(it)
+          #show quote.where(block: true): set text(font: "Noto Serif KR")
+      - file: _josa.typ
+      - file: _logo.typ
