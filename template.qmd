@@ -1,0 +1,28 @@
+---
+title: "문서 제목"
+author: "지은이"
+date: today
+date-format: "YYYY년 MM월 DD일"
+format: koreandoc-typst
+---
+
+## 시작하기
+
+이 문서는 `koreandoc` 확장의 시작 템플릿이다. `format: koreandoc-typst` 한 줄로
+한국어 조판(어절 보호·CJK 간격·한국어 레이블)과 자동 조사가 켜진다.
+
+## 자동 조사
+
+받침에 따라 조사가 자동으로 갈린다. 인라인 raw typst 로 함수를 부른다.
+
+`#eul-reul("책")`{=typst} 읽고 `#eul-reul("바다")`{=typst} 본다.
+`#euro("서울")`{=typst} 가고 `#euro("부산")`{=typst} 내려간다.
+
+| 함수 | 호출 | 결과 |
+|---|---|---|
+| `eun-neun` | `#eun-neun("학생")`{=typst} | 학생은 |
+| `i-ga` | `#i-ga("친구")`{=typst} | 친구가 |
+| `eul-reul` | `#eul-reul("책")`{=typst} | 책을 |
+| `euro` | `#euro("서울")`{=typst} | 서울로 |
+
+: 자동 조사 헬퍼 함수

@@ -1,0 +1,21 @@
+title: Korean Typst
+author: Quarto Craft
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    typst:
+      lang: ko
+      mainfont: "Pretendard"
+      monofont: "D2Coding ligature"
+      fontsize: 11pt
+      linestretch: 1.5
+      margin:
+        x: 2.5cm
+        y: 2.5cm
+      include-in-header:
+        - text: |
+            #show regex("\S*[가-힣]\S*"): it => box(it)
+            #show quote.where(block: true): set text(font: "Noto Serif KR")
+        - file: _josa.typ
+        - file: _logo.typ
