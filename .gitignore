@@ -29,3 +29,6 @@ SKILL.md
 
 # 로컬 Claude 설정
 .claude/
+
+# 참고 PDF(제3자 문서)는 공개 배포 제외 — doc-lab/로컬에만 둔다
+document/

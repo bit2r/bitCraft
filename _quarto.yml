@@ -1,15 +1,7 @@
 project:
   output-dir: docs
   render:
-    - index.qmd
+    - template.qmd
 
-# 한국어 조판 설정(lang:ko·폰트·어절 보호·자동 조사)은 koreandoc 확장이 제공한다.
-# 문서별 설정(목차·번호·참고문헌)만 여기 둔다.
-format:
-  koreandoc-typst:
-    toc: true
-    number-sections: true
-
-bibliography: references.bib
-csl: chicago-author-date.csl
-citeproc: true
+# 한국어 조판·자동 조사는 koreandoc 확장이 제공한다(format: koreandoc-typst).
+# 문서별 설정(format·toc·bibliography·csl)은 template.qmd front matter 에 자기완결로 둔다.
